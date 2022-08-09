@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalProject", "FinalProject\FinalProject.csproj", "{6418AA73-CBBA-445A-BFF4-B39D57D8BF79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{62D2D21E-F083-4EB0-9C06-B22DB3E7838F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{13821607-8566-4965-A8E5-0D8BF0516715}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6418AA73-CBBA-445A-BFF4-B39D57D8BF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6418AA73-CBBA-445A-BFF4-B39D57D8BF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6418AA73-CBBA-445A-BFF4-B39D57D8BF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6418AA73-CBBA-445A-BFF4-B39D57D8BF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D2D21E-F083-4EB0-9C06-B22DB3E7838F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D2D21E-F083-4EB0-9C06-B22DB3E7838F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D2D21E-F083-4EB0-9C06-B22DB3E7838F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D2D21E-F083-4EB0-9C06-B22DB3E7838F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13821607-8566-4965-A8E5-0D8BF0516715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13821607-8566-4965-A8E5-0D8BF0516715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13821607-8566-4965-A8E5-0D8BF0516715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13821607-8566-4965-A8E5-0D8BF0516715}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC18E68E-BE87-44C4-AE62-8DCC1D82B19F}
+	EndGlobalSection
+EndGlobal

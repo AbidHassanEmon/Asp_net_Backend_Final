@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Project_DBModelStoreContainer" CdmEntityContainer="Project_DBEntities">
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="Project_DBModel.Car">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="Car_id" ColumnName="Car_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Reg_year" ColumnName="Reg_year" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Rent" ColumnName="Rent" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rents">
+      <EntityTypeMapping TypeName="Project_DBModel.Rent">
+        <MappingFragment StoreEntitySet="Rents">
+          <ScalarProperty Name="Rent_id" ColumnName="Rent_id" />
+          <ScalarProperty Name="Car_id" ColumnName="Car_id" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="Pickup_time" ColumnName="Pickup_time" />
+          <ScalarProperty Name="Return_time" ColumnName="Return_time" />
+          <ScalarProperty Name="Total_fear" ColumnName="Total_fear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Project_DBModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Lisence_no" ColumnName="Lisence_no" />
+          <ScalarProperty Name="User_name" ColumnName="User_name" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Otp" ColumnName="Otp" />
+          <ScalarProperty Name="Otp_expired" ColumnName="Otp_expired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
