@@ -83,5 +83,40 @@ namespace BLL.Services
             return DataAccessFactory.CarDataAccess().Delete(id);
         }
 
+        public static List<CarModel> Search(SearchModel c)
+        {
+            var rent = new List<int>();
+            var data = DataAccessFactory.RentDataAccess().Get();
+            foreach (var b in data)
+            {
+                if ((c.Pdate >= Convert.ToDateTime(b.Pickup_time)) && (c.Pdate <= Convert.ToDateTime(b.Return_time)) ||
+                (c.Rdate >= Convert.ToDateTime(b.Pickup_time)) && (c.Rdate <= Convert.ToDateTime(b.Return_time)) ||
+                (c.Pdate <= Convert.ToDateTime(b.Pickup_time)) && (c.Rdate >= Convert.ToDateTime(b.Pickup_time)) && (c.Rdate <= Convert.ToDateTime(b.Return_time)) ||
+                (c.Pdate >= Convert.ToDateTime(b.Pickup_time)) && (c.Pdate <= Convert.ToDateTime(b.Return_time)) && (c.Rdate >= Convert.ToDateTime(b.Return_time)) ||
+                (c.Pdate <= Convert.ToDateTime(b.Pickup_time)) && (c.Rdate >= Convert.ToDateTime(b.Return_time)))
+                {
+
+                    rent.Add(b.Car_id);
+                }
+            }
+            var search = DataAccessFactory.CarDataAccess().Get().Where(r => !rent.Contains(r.Car_id));
+            var cars = new List<CarModel>();
+            foreach (var item in search)
+            {
+                var s = new CarModel()
+                {
+                    Car_id = item.Car_id,
+                    Name = item.Name,
+                    Model = item.Model,
+                    Reg_year = item.Reg_year,
+                    Rent = item.Rent,
+                    Mileage = item.Mileage,
+                    Description = item.Description
+                };
+                cars.Add(s);
+            }
+            return cars;
+        }
+
     }
 }

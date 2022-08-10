@@ -49,7 +49,7 @@ namespace FinalProject.Controllers
             var data = UserServices.Create(st);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
-        [Route("api/User/Update")]
+        [Route("api/User/UpdateProfile")]
         [HttpPost]
         public HttpResponseMessage Update(UserPrifileUpdate st)
         {
@@ -62,6 +62,14 @@ namespace FinalProject.Controllers
         public HttpResponseMessage Changepassword(UserChangePassword st)
         {
             var data = UserServices.UpdatePassword(st);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
+
+        [Route("api/User/Search")]
+        [HttpPost]
+        public HttpResponseMessage Search(SearchModel st)
+        {
+            var data = CarServices.Search(st);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
     }
