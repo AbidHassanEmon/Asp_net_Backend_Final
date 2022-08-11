@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\RentController.cs" />

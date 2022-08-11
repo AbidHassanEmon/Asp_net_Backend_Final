@@ -50,14 +50,17 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Entites\CarModel.cs" />
+    <Compile Include="Entites\LoginModel.cs" />
     <Compile Include="Entites\OTPMail.cs" />
     <Compile Include="Entites\RentModel.cs" />
     <Compile Include="Entites\SearchModel.cs" />
+    <Compile Include="Entites\TokenModel.cs" />
     <Compile Include="Entites\UserAdminModel.cs" />
     <Compile Include="Entites\UserChangePassword.cs" />
     <Compile Include="Entites\UserModel.cs" />
     <Compile Include="Entites\UserPrifileUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AuthServices.cs" />
     <Compile Include="Services\CarServices.cs" />
     <Compile Include="Services\OTPServices.cs" />
     <Compile Include="Entites\OTPSubmit.cs" />

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class UserRepo : IRepo<User, int>
+    internal class UserRepo : IRepo<User, int,bool>
     {
         Project_DBEntities db;
 

@@ -28,5 +28,6 @@ namespace DAL.EF
         public virtual DbSet<Car> Cars { get; set; }
         public virtual DbSet<Rent> Rents { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Token> Tokens { get; set; }
     }
 }
