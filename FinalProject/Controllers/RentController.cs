@@ -1,5 +1,6 @@
 ﻿using BLL.Entites;
 using BLL.Services;
+using FinalProject.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace FinalProject.Controllers
 {
     public class RentController : ApiController
     {
+        [ValidAdmin]
         [Route("api/Rents/all")]
         [HttpGet]
         public HttpResponseMessage Get()
