@@ -7,12 +7,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace FinalProject.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class CarController : ApiController
     {
-        [ValidUser]
+        //[ValidUser]
         [Route("api/Cars/all")]
         [HttpGet]
         public HttpResponseMessage Get()
@@ -32,6 +34,10 @@ namespace FinalProject.Controllers
         [HttpPost]
         public HttpResponseMessage Create(CarModel st)
         {
+            if (!ModelState.IsValid)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+            }
             var data = CarServices.Create(st);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
@@ -48,6 +54,10 @@ namespace FinalProject.Controllers
         [HttpPost]
         public HttpResponseMessage Update(CarModel st)
         {
+            if (!ModelState.IsValid)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+            }
             var data = CarServices.Update(st);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }

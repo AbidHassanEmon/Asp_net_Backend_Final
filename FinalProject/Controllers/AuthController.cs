@@ -15,6 +15,10 @@ namespace FinalProject.Controllers
         [HttpPost]
         public HttpResponseMessage Login(LoginModel obj)
         {
+           if(!ModelState.IsValid)
+            { 
+                return Request.CreateResponse(HttpStatusCode.BadRequest,ModelState);
+            }
             var data = AuthServices.Authenticate(obj.Username, obj.Password);
             if (data != null)
             {
@@ -26,6 +30,10 @@ namespace FinalProject.Controllers
         [Route("api/logout")]
         public HttpResponseMessage Logout(TokenModel obj)
         {
+            if (!ModelState.IsValid)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+            }
             var data = AuthServices.Logout(obj);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
